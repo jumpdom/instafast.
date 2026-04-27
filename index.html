@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InstaFat - Instagram Video Downloader</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fab fa-instagram"></i>
+                <h1>InstaFat</h1>
+            </div>
+            <p>Instagram Videos को HD Quality में Free Download करें</p>
+        </header>
+
+        <!-- Main Download Section -->
+        <main class="download-section">
+            <div class="input-group">
+                <input type="url" id="instaUrl" placeholder="Instagram Video/Reel का Link यहाँ Paste करें..." required>
+                <button id="downloadBtn" onclick="downloadVideo()">
+                    <i class="fas fa-download"></i>
+                    <span>Download</span>
+                </button>
+            </div>
+
+            <!-- Loading Spinner -->
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Video ढूंढ रहे हैं...</p>
+            </div>
+
+            <!-- Quality Options -->
+            <div id="qualityOptions" class="quality-options hidden">
+                <h3>Quality Select करें:</h3>
+                <div class="quality-buttons">
+                    <button class="quality-btn active" data-quality="hd">HD (720p)</button>
+                    <button class="quality-btn" data-quality="sd">SD (480p)</button>
+                    <button class="quality-btn" data-quality="ld">Low (360p)</button>
+                </div>
+                <button id="finalDownload" class="final-download-btn">
+                    <i class="fas fa-download"></i>
+                    Download Start करें
+                </button>
+            </div>
+
+            <!-- Preview -->
+            <div id="videoPreview" class="video-preview hidden"></div>
+        </main>
+
+        <!-- Features -->
+        <section class="features">
+            <h2>✨ Features</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <i class="fas fa-hd-desktop"></i>
+                    <h3>Multiple Quality</h3>
+                    <p>HD, SD, Low - सभी qualities available</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Fast Download</h3>
+                    <p>1-Click में instant download</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Mobile Friendly</h3>
+                    <p>PC & Mobile दोनों पर काम करता है</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>100% Safe</h3>
+                    <p>No virus, no malware</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 InstaFat. Made with ❤️ for Instagram lovers</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
