@@ -3,97 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InstaFat - Instagram Video Downloader</title>
+    <title>Instagram Video Downloader</title>
+    <!-- आपकी style.css फ़ाइल को लिंक किया गया है -->
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <div class="logo">
-                <i class="fab fa-instagram"></i>
-                <h1>InstaFat</h1>
-            </div>
-            <p>Instagram Videos को HD Quality में Free Download करें</p>
-        </header>
-
-        <!-- Main Download Section -->
-        <main class="download-section">
+        <div class="downloader-box">
+            <h2>Instagram Video Downloader</h2>
+            <p>इंस्टाग्राम रील्स और वीडियो डाउनलोड करने के लिए नीचे लिंक पेस्ट करें</p>
+            
+            <!-- इनपुट एरिया -->
             <div class="input-group">
-                <input type="url" id="instaUrl" placeholder="Instagram Video/Reel का Link यहाँ Paste करें..." required>
-                <!-- यहाँ से onclick हटा दिया गया है -->
-                <button id="downloadBtn">
-                    <i class="fas fa-download"></i>
-                    <span>Download</span>
-                </button>
+                <input type="text" id="urlInput" placeholder="यहाँ Instagram Reel का लिंक पेस्ट करें...">
+                <button id="downloadBtn">Download</button>
             </div>
 
-            <!-- एरर या मैसेज दिखाने के लिए -->
-            <div id="result" style="text-align: center; margin-top: 10px;"></div>
-
-            <!-- Loading Spinner -->
-            <div id="loading" class="loading hidden" style="display: none; text-align: center; margin: 20px 0;">
-                <div class="spinner" style="border: 4px solid #f3f3f3; border-top: 4px solid #e1306c; border-radius: 50%; width: 30px; height: 30px; animation: spin 1s linear infinite; margin: 0 auto 10px;"></div>
-                <p>Video ढूंढ रहे हैं...</p>
-            </div>
-
-            <!-- Quality Options -->
-            <div id="qualityOptions" class="quality-options hidden" style="display: none; text-align: center; margin-top: 20px;">
-                <h3>Quality Select करें:</h3>
-                <div class="quality-buttons" style="margin: 15px 0;">
-                    <button class="quality-btn active" data-quality="hd" style="padding: 10px 20px; margin: 5px; cursor: pointer;">HD (720p)</button>
-                </div>
-                <!-- इस एंकर टैग में डाउनलोड लिंक एक्टिव होगा -->
-                <a id="finalDownload" class="final-download-btn" href="#" target="_blank" style="background: #e1306c; color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; font-weight: bold; display: inline-block; box-shadow: 0 4px 10px rgba(225, 48, 108, 0.3);">
-                    <i class="fas fa-download"></i>
-                    Download Start करें
-                </a>
-            </div>
-
-            <!-- Preview -->
-            <div id="videoPreview" class="video-preview hidden" style="text-align: center; margin-top: 20px;"></div>
-        </main>
-
-        <!-- Features -->
-        <section class="features">
-            <h2>✨ Features</h2>
-            <div class="feature-grid">
-                <div class="feature">
-                    <i class="fas fa-hd-desktop"></i>
-                    <h3>Multiple Quality</h3>
-                    <p>HD, SD, Low - सभी qualities available</p>
-                </div>
-                <div class="feature">
-                    <i class="fas fa-bolt"></i>
-                    <h3>Fast Download</h3>
-                    <p>1-Click में instant download</p>
-                </div>
-                <div class="feature">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h3>Mobile Friendly</h3>
-                    <p>PC & Mobile दोनों पर काम करता है</p>
-                </div>
-                <div class="feature">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>100% Safe</h3>
-                    <p>No virus, no malware</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2024 InstaFat. Made with ❤️ for Instagram lovers</p>
-        </footer>
+            <!-- यहाँ पर वीडियो का डाउनलोड बटन और रिस्पॉन्स दिखेगा -->
+            <div id="result"></div>
+        </div>
     </div>
 
-    <!-- Spinner Animation CSS -->
-    <style>
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-    </style>
-
+    <!-- सबसे ज़रूरी लाइन: JavaScript फ़ाइल को लिंक करना -->
     <script src="script.js"></script>
 </body>
 </html>
